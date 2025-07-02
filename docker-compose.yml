@@ -1,0 +1,11 @@
+services:
+  app:
+    build: . # Builds the image from the Dockerfile in the root directory of the project
+    container_name: ellis-alura-api
+
+    ports:
+    - "8000:8000"
+
+    volumes:
+      - .:/app # Mounts the project directory to /app in the container.
+               # This allows for live code updates without rebuilding the image.
